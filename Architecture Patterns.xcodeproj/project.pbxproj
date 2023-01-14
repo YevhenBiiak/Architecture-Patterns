@@ -28,6 +28,7 @@
 		576268BA296F145100F9CA8B /* LoginRouter_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576268B9296F145100F9CA8B /* LoginRouter_MVVM.swift */; };
 		576268BC296F175200F9CA8B /* MainRouter_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576268BB296F175200F9CA8B /* MainRouter_MVVM.swift */; };
 		576268BE296F1D9B00F9CA8B /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576268BD296F1D9B00F9CA8B /* DataBase.swift */; };
+		576268C6296F390700F9CA8B /* ArchitecturePatternsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576268C5296F390700F9CA8B /* ArchitecturePatternsUITests.swift */; };
 		578BF951289D7DC400083FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BF950289D7DC400083FF2 /* AppDelegate.swift */; };
 		578BF953289D7DC400083FF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BF952289D7DC400083FF2 /* SceneDelegate.swift */; };
 		578BF95A289D7DC600083FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578BF959289D7DC600083FF2 /* Assets.xcassets */; };
@@ -35,6 +36,16 @@
 		578BF965289D7E0300083FF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BF964289D7E0300083FF2 /* User.swift */; };
 		578BF96B289EF76A00083FF2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BF96A289EF76A00083FF2 /* LoginView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		576268C9296F390700F9CA8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 578BF945289D7DC300083FF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 578BF94C289D7DC400083FF2;
+			remoteInfo = "Architecture Patterns";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5762688F296ECCFE00F9CA8B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -58,6 +69,8 @@
 		576268B9296F145100F9CA8B /* LoginRouter_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter_MVVM.swift; sourceTree = "<group>"; };
 		576268BB296F175200F9CA8B /* MainRouter_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter_MVVM.swift; sourceTree = "<group>"; };
 		576268BD296F1D9B00F9CA8B /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		576268C3296F390700F9CA8B /* ArchitecturePatternsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitecturePatternsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		576268C5296F390700F9CA8B /* ArchitecturePatternsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitecturePatternsUITests.swift; sourceTree = "<group>"; };
 		578BF94D289D7DC400083FF2 /* Architecture Patterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Architecture Patterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		578BF950289D7DC400083FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		578BF952289D7DC400083FF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		576268C0296F390700F9CA8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		578BF94A289D7DC400083FF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,10 +162,19 @@
 			path = "Main Scene";
 			sourceTree = "<group>";
 		};
+		576268C4296F390700F9CA8B /* ArchitecturePatternsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				576268C5296F390700F9CA8B /* ArchitecturePatternsUITests.swift */,
+			);
+			path = ArchitecturePatternsUITests;
+			sourceTree = "<group>";
+		};
 		578BF944289D7DC300083FF2 = {
 			isa = PBXGroup;
 			children = (
 				578BF94F289D7DC400083FF2 /* Architecture Patterns */,
+				576268C4296F390700F9CA8B /* ArchitecturePatternsUITests */,
 				578BF94E289D7DC400083FF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				578BF94D289D7DC400083FF2 /* Architecture Patterns.app */,
+				576268C3296F390700F9CA8B /* ArchitecturePatternsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +235,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		576268C2296F390700F9CA8B /* ArchitecturePatternsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576268CB296F390700F9CA8B /* Build configuration list for PBXNativeTarget "ArchitecturePatternsUITests" */;
+			buildPhases = (
+				576268BF296F390700F9CA8B /* Sources */,
+				576268C0296F390700F9CA8B /* Frameworks */,
+				576268C1296F390700F9CA8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				576268CA296F390700F9CA8B /* PBXTargetDependency */,
+			);
+			name = ArchitecturePatternsUITests;
+			productName = ArchitecturePatternsUITests;
+			productReference = 576268C3296F390700F9CA8B /* ArchitecturePatternsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		578BF94C289D7DC400083FF2 /* Architecture Patterns */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 578BF961289D7DC600083FF2 /* Build configuration list for PBXNativeTarget "Architecture Patterns" */;
@@ -229,9 +277,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					576268C2296F390700F9CA8B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 578BF94C289D7DC400083FF2;
+					};
 					578BF94C289D7DC400083FF2 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -251,11 +303,19 @@
 			projectRoot = "";
 			targets = (
 				578BF94C289D7DC400083FF2 /* Architecture Patterns */,
+				576268C2296F390700F9CA8B /* ArchitecturePatternsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		576268C1296F390700F9CA8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		578BF94B289D7DC400083FF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +328,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		576268BF296F390700F9CA8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576268C6296F390700F9CA8B /* ArchitecturePatternsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		578BF949289D7DC400083FF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +370,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		576268CA296F390700F9CA8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 578BF94C289D7DC400083FF2 /* Architecture Patterns */;
+			targetProxy = 576268C9296F390700F9CA8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		578BF95B289D7DC600083FF2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -314,6 +390,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		576268CC296F390700F9CA8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3BYVBK57Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.biiak.ArchitecturePatternsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "Architecture Patterns";
+			};
+			name = Debug;
+		};
+		576268CD296F390700F9CA8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P3BYVBK57Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.biiak.ArchitecturePatternsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "Architecture Patterns";
+			};
+			name = Release;
+		};
 		578BF95F289D7DC600083FF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,6 +611,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		576268CB296F390700F9CA8B /* Build configuration list for PBXNativeTarget "ArchitecturePatternsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576268CC296F390700F9CA8B /* Debug */,
+				576268CD296F390700F9CA8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		578BF948289D7DC300083FF2 /* Build configuration list for PBXProject "Architecture Patterns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

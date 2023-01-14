@@ -22,7 +22,15 @@ class LoginViewController_MVP: UIViewController, LoginView_MVP {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         rootView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        rootView.usernameTextField.delegate = self
+        rootView.passwordTextField.delegate = self
+        
+        rootView.usernameTextField.returnKeyType  = .next
+        rootView.passwordTextField.returnKeyType  = .done
+        
         presenter.viewDidLoad()
     }
     
@@ -46,5 +54,25 @@ class LoginViewController_MVP: UIViewController, LoginView_MVP {
         let password = rootView.passwordTextField.text ?? ""
         
         presenter.login(username: username, password: password)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension LoginViewController_MVP: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case rootView.usernameTextField:
+            rootView.passwordTextField.becomeFirstResponder()
+        case rootView.passwordTextField:
+            rootView.passwordTextField.resignFirstResponder()
+            rootView.loginButton.sendActions(for: .touchUpInside)
+        default:
+            break
+        }
+        
+        return true
     }
 }

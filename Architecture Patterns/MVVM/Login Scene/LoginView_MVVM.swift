@@ -22,7 +22,14 @@ class LoginViewController_MVVM: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         rootView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        rootView.usernameTextField.delegate = self
+        rootView.passwordTextField.delegate = self
+        
+        rootView.usernameTextField.returnKeyType  = .next
+        rootView.passwordTextField.returnKeyType  = .done
         
         viewModel.loginStatus.bind { [weak self] status in
             self?.rootView.loginStatusLabel.text = status
@@ -43,5 +50,25 @@ class LoginViewController_MVVM: UIViewController {
         let password = rootView.passwordTextField.text ?? ""
         
         viewModel.login(username: username, password: password)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension LoginViewController_MVVM: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case rootView.usernameTextField:
+            rootView.passwordTextField.becomeFirstResponder()
+        case rootView.passwordTextField:
+            rootView.passwordTextField.resignFirstResponder()
+            rootView.loginButton.sendActions(for: .touchUpInside)
+        default:
+            break
+        }
+        
+        return true
     }
 }

@@ -22,7 +22,14 @@ class LoginViewController_MVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         rootView.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        rootView.usernameTextField.delegate = self
+        rootView.passwordTextField.delegate = self
+        
+        rootView.usernameTextField.returnKeyType  = .next
+        rootView.passwordTextField.returnKeyType  = .done
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,5 +70,25 @@ class LoginViewController_MVC: UIViewController {
         mainViewController.modalPresentationStyle = .fullScreen
         
         present(mainViewController, animated: true)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension LoginViewController_MVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case rootView.usernameTextField:
+            rootView.passwordTextField.becomeFirstResponder()
+        case rootView.passwordTextField:
+            rootView.passwordTextField.resignFirstResponder()
+            rootView.loginButton.sendActions(for: .touchUpInside)
+        default:
+            break
+        }
+        
+        return true
     }
 }
