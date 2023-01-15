@@ -1,6 +1,6 @@
 //
 //  LoginScreen_UITests.swift
-//  LoginScreen_UITests
+//  ArchitecturePatternsUITests
 //
 //  Created by Yevhen Biiak on 11.01.2023.
 //

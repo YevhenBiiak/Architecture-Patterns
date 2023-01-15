@@ -18,12 +18,14 @@ class MainViewModelImpl_MVVM: MainViewModel_MVVM {
     
     var username: Binding<String>
     
-    private let router: MainRouterImpl_MVVM
+    private let router: MainRouter_MVVM
     private var user: User {
-        didSet { username.value = user.username }
+        didSet {
+            username.value = user.username
+        }
     }
     
-    init(router: MainRouterImpl_MVVM, user: User) {
+    init(router: MainRouter_MVVM, user: User) {
         self.router = router
         self.user = user
         self.username = Binding(user.username)
